@@ -1,6 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include<windows.h>
+#include<string>
 
 using namespace std;
 class Bank{
@@ -9,13 +10,16 @@ class Bank{
    int amount = 0;
    void info()
    {
-    cout<<"Please enter your first name:";cin>>this->f_name;
+    cout<<"Please enter your first name:";
+    cin.ignore();
+    getline(cin, f_name);
     cout<<"Please enter your last name:";
     cin>>this->l_name;
     cout<<"Please enter your Phone number:";
     cin>>this->p_no;
     cout<<"Please enter your address:";
-    cin>>this->address;
+    cin.ignore();
+    getline(cin, address);
     cout<<"Please enter your cnic:";
     cin>>this->cnic;
     
